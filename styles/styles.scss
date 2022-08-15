@@ -21,7 +21,7 @@ body {
   margin: 0;
 }
 
-article {
+main {
   display: flex;
   flex-direction: column;
   background-color: $dark_desat_blue;
@@ -42,13 +42,14 @@ article {
     }
   }
 
-  .main {
+  article {
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 32px;
 
-    .heading {
+    h2 {
+      margin: 0;
       font-family: 'Inter', sans-serif;
       color: $white_heading;
       font-size: $heading_size;
@@ -94,13 +95,13 @@ article {
 }
 
 @media(min-width: 576px) and (max-width: 767px) {
-  article {
+  main {
     margin: 96px 64px;
   }
 }
 
 @media(min-width: 768px) and (max-width: 1023px) {
-  article {
+  main {
     margin: 128px 96px;
   }
 }
@@ -112,17 +113,17 @@ article {
     align-items: center;
     height: 100vh;
   }
-  article {
+  main {
     max-width: 1120px;
     flex-direction: row-reverse;
     justify-content: flex-start;
     text-align: left;
 
-    .main {
+    article {
       padding: 64px;
       justify-content: space-between;
 
-      .heading {
+      h2 {
         font-size: 37px;
       }
 

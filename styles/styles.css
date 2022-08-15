@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 
-article {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,20 +25,20 @@ article {
   overflow: hidden;
   text-align: center;
 }
-article picture {
+main picture {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   background-color: hsl(277deg, 64%, 61%);
   width: 100%;
 }
-article picture img {
+main picture img {
   width: 100%;
   mix-blend-mode: multiply;
   -o-object-fit: cover;
      object-fit: cover;
 }
-article .main {
+main article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,19 +49,20 @@ article .main {
   gap: 24px;
   padding: 32px;
 }
-article .main .heading {
+main article h2 {
+  margin: 0;
   font-family: "Inter", sans-serif;
   color: hsl(0deg, 0%, 100%);
   font-size: 29px;
   font-weight: 700;
 }
-article .main .heading span {
+main article h2 span {
   color: hsl(277deg, 64%, 61%);
 }
-article .main #description {
+main article #description {
   line-height: 24px;
 }
-article .main .stats-container {
+main article .stats-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +73,7 @@ article .main .stats-container {
   margin-top: 16px;
   gap: 32px;
 }
-article .main .stats-container .stats {
+main article .stats-container .stats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,13 +83,13 @@ article .main .stats-container .stats {
           flex-direction: column;
   gap: 8px;
 }
-article .main .stats-container .stats p {
+main article .stats-container .stats p {
   font-family: "Inter", sans-serif;
   color: hsl(0deg, 0%, 100%);
   font-size: 23px;
   font-weight: 700;
 }
-article .main .stats-container .stats .heading {
+main article .stats-container .stats .heading {
   font-family: "Lexend Deca", sans-serif;
   font-size: 12px;
   color: hsla(0deg, 0%, 100%, 0.6);
@@ -96,12 +97,12 @@ article .main .stats-container .stats .heading {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-  article {
+  main {
     margin: 96px 64px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  article {
+  main {
     margin: 128px 96px;
   }
 }
@@ -118,7 +119,7 @@ article .main .stats-container .stats .heading {
             align-items: center;
     height: 100vh;
   }
-  article {
+  main {
     max-width: 1120px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -129,19 +130,19 @@ article .main .stats-container .stats .heading {
             justify-content: flex-start;
     text-align: left;
   }
-  article .main {
+  main article {
     padding: 64px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  article .main .heading {
+  main article h2 {
     font-size: 37px;
   }
-  article .main #description {
+  main article #description {
     margin-right: 56px;
   }
-  article .main .stats-container {
+  main article .stats-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
