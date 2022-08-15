@@ -42,7 +42,7 @@ article {
     }
   }
 
-  main {
+  .main {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -118,7 +118,7 @@ article {
     justify-content: flex-start;
     text-align: left;
 
-    main {
+    .main {
       padding: 64px;
       justify-content: space-between;
 
