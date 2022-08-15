@@ -6,42 +6,53 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32"
       href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap"
+      rel="stylesheet">
 
     <title>Frontend Mentor | Stats preview card component</title>
   </head>
   <body>
-    <main class="container">
-      <img src="./images/image-header-mobile.jpg" alt="header" id="img-header1">
-      <img src="./images/image-header-desktop.jpg" alt="header"
-        id="img-header2">
-      <div class="box">
-        <p class="title">
-          Get <span class="accent">insights</span> that help your business grow.
+    <article>
+      <picture>
+        <source srcset="./images/image-header-desktop.jpg" media="(min-width:
+          768px)" alt="header">
+        <img src="./images/image-header-mobile.jpg" alt="header">
+      </picture>
+
+      <main>
+        <p class="heading">
+          Get <span>insights</span> that help your business grow.
         </p>
 
-        <p class="description">
+        <p id="description">
           Discover the benefits of data analytics and make better decisions
           regarding revenue, customer
           experience, and overall efficiency.
         </p>
 
-        <div class="stats">
-          <div class="stat">
-            <p class="stat-num">10k+</p>
-            <p class="stat-text">COMPANIES</p>
+        <div class="stats-container">
+          <div class="stats">
+            <p>10k+</p>
+            <p class="heading">COMPANIES</p>
           </div>
-          <div class="stat">
-            <p class="stat-num">314</p>
-            <p class="stat-text">TEMPLATES</p>
+          <div class="stats">
+            <p>314</p>
+            <p class="heading">TEMPLATES</p>
           </div>
-          <div class="stat">
-            <p class="stat-num">12m+</p>
-            <p class="stat-text">QUERIES</p>
+          <div class="stats">
+            <p>12M+</p>
+            <p class="heading">QUERIES</p>
           </div>
         </div>
 
-      </div>
+      </main>
+    </article>
 
-    </main>
   </body>
 </html>

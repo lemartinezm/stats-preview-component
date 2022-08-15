@@ -1,105 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&display=swap');
-
 // Variables
-// Fonts
-$family-inter: 'Inter', sans-serif;
-$family-lexend: 'Lexend Deca', sans-serif;
-// Colors
+$very_dark_blue: hsl(233, 47%, 7%);
+$dark_desat_blue: hsl(244, 38%, 16%);
+$soft_violet: hsl(277, 64%, 61%);
+$white_heading: hsl(0, 0%, 100%);
+$white_para: hsla(0, 0%, 100%, 0.75);
+$white_stat_headings: hsla(0, 0%, 100%, 0.6);
+
+$heading_size: 29px;
 
 p {
   margin: 0;
 }
 
 body {
-  margin: 0;
-  font-family: $family-inter;
+  background-color: $very_dark_blue;
+  color: $white_para;
   font-size: 15px;
-  background-color: hsl(233, 47%, 7%);
-  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+article {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  background-color: $dark_desat_blue;
+  margin: 96px 24px;
+  border-radius: 8px;
+  overflow: hidden;
   text-align: center;
-  min-height: 100vh;
 
-  .container {
-    width: 20rem;
-    background-color: hsl(244, 38%, 16%);
-    border-radius: 0.5rem;
+  picture {
+    display: inline-flex;
+    background-color: $soft_violet;
+    width: 100%;
 
-    #img-header1 {
-      border-radius: 0.5rem 0.5rem 0 0;
+    img {
       width: 100%;
-    }
-
-    #img-header2 {
-      display: none;
-    }
-
-    .title {
-      font-size: 28px;
-      font-weight: 700;
-      margin: 1rem 0;
-      .accent {
-        color: hsl(277, 64%, 61%);
-      }
-    }
-
-    .box {
-      margin: 0 1.5rem;
-
-      .description {
-        color: hsla(0, 0%, 100%, 0.75);
-        line-height: 175%;
-      }
-
-      .stat {
-        display: flex;
-        flex-direction: column;
-        margin: 2rem 0;
-
-        .stat-num {
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        .stat-text {
-          margin-top: 0.5rem;
-          font-family: $family-lexend;
-          color: hsla(0, 0%, 100%, 0.6);
-        }
-      }
+      mix-blend-mode: multiply;
+      object-fit: cover;
     }
   }
 
-  @media (min-width: 1024px) {
-    .container {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+
+    .heading {
+      font-family: 'Inter', sans-serif;
+      color: $white_heading;
+      font-size: $heading_size;
+      font-weight: 700;
+
+      span {
+        color: $soft_violet;
+      }
+    }
+
+    #description {
+      line-height: 24px;
+    }
+
+    .stats-container {
       display: flex;
-      flex-direction: row-reverse;
-      width: 70rem;
-      height: auto;
+      flex-direction: column;
+      margin-top: 16px;
+      gap: 32px;
 
-      #img-header1 {
-        display: none;
-      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-      #img-header2 {
-        border-radius: 0 0.5rem 0.5rem 0;
-        display: block;
-        width: 50%;
-      }
-
-      .box {
-        margin: 4rem 5rem;
-        box-sizing: border-box;
-
-        .stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          align-content: space-between;
+        p {
+          font-family: 'Inter', sans-serif;
+          color: $white_heading;
+          font-size: 23px;
+          font-weight: 700;
         }
+
+        .heading {
+          font-family: 'Lexend Deca', sans-serif;
+          font-size: 12px;
+          color: $white_stat_headings;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+  }
+}
+
+@media(min-width: 576px) and (max-width: 767px) {
+  article {
+    margin: 96px 64px;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1023px) {
+  article {
+    margin: 128px 96px;
+  }
+}
+
+@media(min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  article {
+    max-width: 1120px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    text-align: left;
+
+    main {
+      padding: 64px;
+      justify-content: space-between;
+
+      .heading {
+        font-size: 37px;
+      }
+
+      #description {
+        margin-right: 56px;
+      }
+
+      .stats-container {
+        flex-direction: row;
+        gap: 56px;
+        margin-top: 40px;
       }
     }
   }
