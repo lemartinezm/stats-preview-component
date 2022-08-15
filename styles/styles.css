@@ -37,6 +37,7 @@ main picture img {
   mix-blend-mode: multiply;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 75%;
 }
 main article {
   display: -webkit-box;
